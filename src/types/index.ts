@@ -112,12 +112,49 @@ export interface DetailAnalytics {
         status: 'optimal' | 'overstaffed' | 'understaffed';
       }>;
     };
+    action_logs?: Array<{
+      date: string;
+      text: string;
+    }>;
+    qsc_analysis?: {
+      summary: {
+        google_rating: number;
+        review_count: number;
+        sentiment_ratio: {
+          positive: number;
+          negative: number;
+        };
+      };
+      trend_comparison: Array<{
+        date: string;
+        sales: number;
+        rating: number;
+      }>;
+      topics: Array<{
+        text: string;
+        value: number;
+        sentiment: 'positive' | 'negative';
+      }>;
+      reviews: Array<{
+        text: string;
+        keywords: string[];
+        author: string;
+        date: string;
+      }>;
+    };
   };
 }
 
 export interface MockData {
   version: string;
   last_updated: string;
+  chat_responses?: Record<string, string>;
+  engagement_insight?: any;
+  coupon_templates?: Array<{
+    id: string;
+    name: string;
+    message: string;
+  }>;
   user: {
     id: string;
     name: string;

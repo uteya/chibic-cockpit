@@ -34,7 +34,7 @@ export default function GAPCard({
       <div className="text-center mb-6">
         <div className="text-xs text-gray-500 mb-1">GAP</div>
         <div
-          className={`text-5xl font-bold ${
+          className={`text-2xl sm:text-3xl md:text-4xl font-bold ${
             isPositive ? 'text-green-600' : 'text-red-600'
           }`}
         >

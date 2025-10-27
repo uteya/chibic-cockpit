@@ -104,7 +104,7 @@ export default function DetailDashboardPage() {
         <div className="grid grid-cols-3 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="text-sm text-gray-600 mb-2">売上実績</div>
-            <div className="text-3xl font-bold text-gray-800">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
               {formatCurrency(store.kpis.sales.actual)}
             </div>
             <div className="text-sm text-gray-500 mt-2">
@@ -114,7 +114,7 @@ export default function DetailDashboardPage() {
 
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="text-sm text-gray-600 mb-2">原価率</div>
-            <div className="text-3xl font-bold text-gray-800">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
               {formatPercent(store.kpis.cost_rate.actual)}
             </div>
             <div className="text-sm text-gray-500 mt-2">
@@ -124,7 +124,7 @@ export default function DetailDashboardPage() {
 
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="text-sm text-gray-600 mb-2">人件費率</div>
-            <div className="text-3xl font-bold text-gray-800">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
               {formatPercent(store.kpis.labor_cost_rate.actual)}
             </div>
             <div className="text-sm text-gray-500 mt-2">

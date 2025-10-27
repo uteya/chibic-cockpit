@@ -1,0 +1,205 @@
+{
+  "version": "2.0.0",
+  "last_updated": "2025-10-25T12:00:00+09:00",
+  "chat_responses": {
+    "人時売上を計算して": "承知いたしました。全店舗の本日付けの人時売上は以下の通りです。\n\n- 八重洲店: 5,250円\n- 新橋店: 4,800円\n- 渋谷店: 5,500円",
+    "昨日のピークタイムは？": "昨日の売上ピークタイムは、19:00〜20:00でした。この時間帯の売上は全体の25%を占めています。",
+    "一番売れたメニューは？": "昨日、全店舗で最も売れたメニューは「生ビール」で、合計350杯です。次いで「唐揚げ」が280皿でした。",
+    "default": "ご質問ありがとうございます。申し訳ありませんが、そのご質問には現在お答えできません。（モックアップ）"
+  },
+  "engagement_insight": {
+    "store_id": "st0002",
+    "type": "engagement",
+    "emoji": "💔",
+    "message": "【気づき】主要顧客の離反兆候を検出しました",
+    "observation": "「ゴールドランク顧客」の平均来店間隔が、先月の25日から、今月は40日へと長期化しています。",
+    "clue": "来店が途絶えている顧客リスト（5名）を特定しました",
+    "logic": "主要な常連客が離反する兆候です。早急なフォローアップを検討しませんか？",
+    "target_customers": [
+      { "id": "c001", "name": "田中 太郎" },
+      { "id": "c002", "name": "鈴木 一郎" },
+      { "id": "c003", "name": "佐藤 次郎" },
+      { "id": "c004", "name": "高橋 三郎" },
+      { "id": "c005", "name": "伊藤 四郎" }
+    ]
+  },
+  "coupon_templates": [
+    {
+      "id": "coupon01",
+      "name": "【特別ご優待】ドリンク1杯無料クーポン",
+      "message": "〇〇様、いつもありがとうございます！最近お会いできず寂しいです。ささやかですが、ドリンク1杯無料クーポンをお送りします。またのご来店を心よりお待ちしております！"
+    },
+    {
+      "id": "coupon02",
+      "name": "【感謝を込めて】お会計から10%OFFクーポン",
+      "message": "〇〇様へ。日頃の感謝を込めて、お会計から10%OFFとなる特別なクーポンをご用意しました。ぜひ、またお顔を見せにいらしてください。"
+    }
+  ],
+  "user": {
+    "id": "user_001",
+    "name": "田中 太郎",
+    "role": "エリアマネージャー",
+    "managed_stores": ["st0001", "st0002", "st0003"]
+  },
+  "stores": [
+    {
+      "store_id": "st0001",
+      "store_name": "ちびっく食堂 八重洲店",
+      "master_id": "M0000001",
+      "region": "東京",
+      "kpis": {
+        "sales": {"actual": 580000, "budget": 600000, "last_year": 550000, "change_rate": 5.45, "status": "success"},
+        "cost_rate": {"actual": 30.5, "budget": 32.0, "last_year": 31.2, "change_rate": -0.7, "status": "success"},
+        "labor_cost_rate": {"actual": 28.0, "budget": 30.0, "last_year": 29.5, "change_rate": -1.5, "status": "success"}
+      },
+      "sparkline": [520000, 550000, 450000, 600000, 620000, 580000, 580000],
+      "budget_data": {
+        "monthly_budget": 18000000,
+        "cumulative_budget": 12000000,
+        "cumulative_actual": 12150000,
+        "forecast": 18200000,
+        "gap": 150000,
+        "gap_percentage": 1.25
+      },
+      "theory_vs_actual": {
+        "cost_rate": {"type": "cost_rate", "theory_value": 30.0, "actual_value": 30.5, "over_percentage": 1.7, "monthly_impact": 90000},
+        "labor_cost_rate": {"type": "labor_cost_rate", "theory_value": 28.0, "actual_value": 28.0, "over_percentage": 0.0, "monthly_impact": 0}
+      },
+      "gap_info": [
+        {"kpi_type": "売上", "gap_amount": 150000, "gap_percentage": 1.25, "is_positive": true, "recommendation": "順調です！この調子を維持しましょう"}
+      ]
+    },
+    {
+      "store_id": "st0002",
+      "store_name": "ちびっく酒場 新橋店",
+      "master_id": "M0000002",
+      "region": "東京",
+      "kpis": {
+        "sales": {"actual": 480000, "budget": 500000, "last_year": 520000, "change_rate": -7.69, "status": "danger"},
+        "cost_rate": {"actual": 32.5, "budget": 30.0, "last_year": 30.8, "change_rate": 2.5, "status": "warning"},
+        "labor_cost_rate": {"actual": 29.0, "budget": 30.0, "last_year": 30.2, "change_rate": -1.0, "status": "success"}
+      },
+      "sparkline": [520000, 550000, 450000, 600000, 620000, 580000, 480000],
+      "budget_data": {
+        "monthly_budget": 15000000,
+        "cumulative_budget": 10000000,
+        "cumulative_actual": 9750000,
+        "forecast": 14500000,
+        "gap": -250000,
+        "gap_percentage": -2.5
+      },
+      "theory_vs_actual": {
+        "cost_rate": {"type": "cost_rate", "theory_value": 30.0, "actual_value": 32.5, "over_percentage": 8.3, "monthly_impact": 375000},
+        "labor_cost_rate": {"type": "labor_cost_rate", "theory_value": 28.0, "actual_value": 29.0, "over_percentage": 3.6, "monthly_impact": 150000}
+      },
+      "gap_info": [
+        {"kpi_type": "売上", "gap_amount": -250000, "gap_percentage": -2.5, "is_positive": false, "recommendation": "ディナータイムの集客施策を強化しましょう"},
+        {"kpi_type": "原価率", "gap_amount": 375000, "gap_percentage": 8.3, "is_positive": false, "recommendation": "理論原価とのズレが大きいです。ロス削減を検討しましょう"}
+      ]
+    },
+    {
+      "store_id": "st0003",
+      "store_name": "ちびっく居酒屋 渋谷店",
+      "master_id": "M0000003",
+      "region": "東京",
+      "kpis": {
+        "sales": {"actual": 720000, "budget": 700000, "last_year": 680000, "change_rate": 5.88, "status": "success"},
+        "cost_rate": {"actual": 29.8, "budget": 32.0, "last_year": 31.5, "change_rate": -1.7, "status": "success"},
+        "labor_cost_rate": {"actual": 31.2, "budget": 30.0, "last_year": 29.8, "change_rate": 1.4, "status": "warning"}
+      },
+      "sparkline": [650000, 680000, 590000, 720000, 740000, 700000, 720000],
+      "budget_data": {
+        "monthly_budget": 21000000,
+        "cumulative_budget": 14000000,
+        "cumulative_actual": 14400000,
+        "forecast": 21600000,
+        "gap": 400000,
+        "gap_percentage": 2.86
+      },
+      "theory_vs_actual": {
+        "cost_rate": {"type": "cost_rate", "theory_value": 29.0, "actual_value": 29.8, "over_percentage": 2.8, "monthly_impact": 168000},
+        "labor_cost_rate": {"type": "labor_cost_rate", "theory_value": 29.5, "actual_value": 31.2, "over_percentage": 5.8, "monthly_impact": 357000}
+      },
+      "gap_info": [
+        {"kpi_type": "売上", "gap_amount": 400000, "gap_percentage": 2.86, "is_positive": true, "recommendation": "好調です！週末の売上が伸びています"},
+        {"kpi_type": "人件費率", "gap_amount": 357000, "gap_percentage": 5.8, "is_positive": false, "recommendation": "シフト配置の最適化で改善できます"}
+      ]
+    }
+  ],
+  "ai_insights": [
+    {"id": "insight_001", "store_id": "st0002", "kpi_type": "sales", "severity": "high", "emoji": "📉", "message": "【気づき】2件の改善機会が見つかりました", "observation": "18時台の売上が、昨年同曜日と比較して8%低下しています", "clue": "客単価は昨年並みですが、客数が10%減少しています", "logic": "客数減少が主要因です。ディナータイムの集客施策を検討しませんか？", "recommended_actions": [{"id": "action_001", "label": "予約データを確認する", "icon": "📅", "action_type": "navigate", "target": "/st0002/reservations"}, {"id": "action_002", "label": "この気づきを確認済みにする", "icon": "✅", "action_type": "dismiss", "target": null}]},
+    {"id": "insight_002", "store_id": "st0003", "kpi_type": "labor_cost_rate", "severity": "medium", "emoji": "⚠️", "message": "【気づき】人件費率が予算を超過しています", "observation": "週末のシフト人数が平日より20%多い状態が続いています", "clue": "売上は増加していますが、人件費の伸びがそれを上回っています", "logic": "シフト配置の最適化により、人件費率を改善できる可能性があります", "recommended_actions": [{"id": "action_003", "label": "シフト配置を確認する", "icon": "👥", "action_type": "navigate", "target": "/st0003/shifts"}, {"id": "action_004", "label": "この気づきを確認済みにする", "icon": "✅", "action_type": "dismiss", "target": null}]},
+    {"id": "insight_003", "store_id": "st0002", "kpi_type": "cost_rate", "severity": "medium", "emoji": "🍽️", "message": "【気づき】原価率が理論値を大きく上回っています", "observation": "原価率が理論値30.0%に対して32.5%と、8.3%オーバーしています", "clue": "特定の食材で廃棄量が増加している可能性があります", "logic": "発注量の見直しやロス削減により、月間37.5万円の改善が見込めます", "recommended_actions": [{"id": "action_005", "label": "食材別ロスを確認する", "icon": "📊", "action_type": "navigate", "target": "/st0002/food-loss"}, {"id": "action_006", "label": "この気づきを確認済みにする", "icon": "✅", "action_type": "dismiss", "target": null}]}
+  ],
+  "detail_analytics": {
+    "st0001": {
+      "sales_trend": {"dates": ["2025-10-18", "2025-10-19", "2025-10-20", "2025-10-21", "2025-10-22", "2025-10-23", "2025-10-24"], "actual": [520000, 550000, 450000, 600000, 620000, 580000, 580000], "last_year": [510000, 540000, 460000, 590000, 610000, 570000, 550000], "forecast": [null, null, null, null, null, null, 590000], "normal_range": {"upper": [550000, 580000, 480000, 630000, 650000, 610000, 610000], "lower": [490000, 520000, 420000, 570000, 590000, 550000, 530000]}},
+      "hourly_breakdown": {"hours": ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"], "sales_actual": [40000, 90000, 80000, 45000, 25000, 30000, 35000, 70000, 85000, 70000, 40000], "sales_last_year": [38000, 88000, 78000, 43000, 23000, 28000, 33000, 68000, 83000, 68000, 38000]},
+      "menu_analysis": {"top_items": [{"name": "日替わり定食", "quantity": 150, "revenue": 105000, "change_rate": 3.5}, {"name": "カツカレー", "quantity": 95, "revenue": 76000, "change_rate": -1.2}, {"name": "生姜焼き定食", "quantity": 80, "revenue": 64000, "change_rate": 6.8}]},
+      "staff_analysis": {"shifts": [{"time": "11:00-14:00", "required": 4, "actual": 4, "status": "optimal"}, {"time": "14:00-17:00", "required": 2, "actual": 2, "status": "optimal"}, {"time": "17:00-21:00", "required": 3, "actual": 3, "status": "optimal"}]},
+      "action_logs": []
+    },
+    "st0002": {
+      "sales_trend": {"dates": ["2025-10-18", "2025-10-19", "2025-10-20", "2025-10-21", "2025-10-22", "2025-10-23", "2025-10-24"], "actual": [520000, 550000, 450000, 600000, 620000, 580000, 480000], "last_year": [510000, 540000, 460000, 590000, 610000, 570000, 520000], "forecast": [null, null, null, null, null, null, 500000], "normal_range": {"upper": [550000, 580000, 480000, 630000, 650000, 610000, 530000], "lower": [490000, 520000, 420000, 570000, 590000, 550000, 470000]}},
+      "hourly_breakdown": {"hours": ["11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"], "sales_actual": [30000, 80000, 70000, 40000, 20000, 25000, 50000, 60000, 90000, 70000, 35000, 10000], "sales_last_year": [32000, 82000, 72000, 42000, 22000, 27000, 52000, 65000, 92000, 72000, 37000, 12000]},
+      "menu_analysis": {"top_items": [{"name": "生ビール", "quantity": 120, "revenue": 60000, "change_rate": 5.2}, {"name": "唐揚げ", "quantity": 85, "revenue": 42500, "change_rate": -3.1}, {"name": "刺身盛り", "quantity": 45, "revenue": 67500, "change_rate": 8.4}]},
+      "staff_analysis": {"shifts": [{"time": "11:00-15:00", "required": 3, "actual": 3, "status": "optimal"}, {"time": "15:00-18:00", "required": 2, "actual": 3, "status": "overstaffed"}, {"time": "18:00-22:00", "required": 5, "actual": 4, "status": "understaffed"}]},
+      "action_logs": [
+        {
+          "date": "2025-10-22",
+          "text": "新しいディナーセットの提供を開始し、Instagramで告知キャンペーンを実施。"
+        }
+      ],
+      "qsc_analysis": {
+        "summary": {
+          "google_rating": 4.2,
+          "review_count": 15,
+          "sentiment_ratio": { "positive": 80, "negative": 20 }
+        },
+        "trend_comparison": [
+          { "date": "2025-10-18", "sales": 520000, "rating": 4.1 },
+          { "date": "2025-10-19", "sales": 550000, "rating": 4.3 },
+          { "date": "2025-10-20", "sales": 450000, "rating": 3.9 },
+          { "date": "2025-10-21", "sales": 600000, "rating": 4.5 },
+          { "date": "2025-10-22", "sales": 620000, "rating": 4.2 },
+          { "date": "2025-10-23", "sales": 580000, "rating": 4.4 },
+          { "date": "2025-10-24", "sales": 480000, "rating": 4.0 }
+        ],
+        "topics": [
+          { "text": "接客が丁寧", "value": 5, "sentiment": "positive" },
+          { "text": "刺身が新鮮", "value": 3, "sentiment": "positive" },
+          { "text": "提供が遅い", "value": 4, "sentiment": "negative" },
+          { "text": "個室が良い", "value": 2, "sentiment": "positive" },
+          { "text": "トイレが汚い", "value": 1, "sentiment": "negative" }
+        ],
+        "reviews": [
+          {
+            "text": "いつも接客が丁寧で、料理も美味しいです。ただ、週末は提供が遅いのが少し残念。",
+            "keywords": ["接客が丁寧", "提供が遅い"],
+            "author": "山田太郎",
+            "date": "2025-10-23"
+          },
+          {
+            "text": "刺身が新鮮で本当に美味しい！個室もあって使いやすいです。",
+            "keywords": ["刺身が新鮮", "個室が良い"],
+            "author": "佐藤花子",
+            "date": "2025-10-22"
+          },
+          {
+            "text": "料理は美味しいのですが、トイレの清掃をもう少し頻繁にお願いしたいです。",
+            "keywords": ["トイレが汚い"],
+            "author": "鈴木一郎",
+            "date": "2025-10-20"
+          }
+        ]
+      }
+    },
+    "st0003": {
+      "sales_trend": {"dates": ["2025-10-18", "2025-10-19", "2025-10-20", "2025-10-21", "2025-10-22", "2025-10-23", "2025-10-24"], "actual": [650000, 680000, 590000, 720000, 740000, 700000, 720000], "last_year": [640000, 670000, 580000, 710000, 730000, 690000, 680000], "forecast": [null, null, null, null, null, null, 730000], "normal_range": {"upper": [680000, 710000, 620000, 750000, 770000, 730000, 750000], "lower": [620000, 650000, 560000, 690000, 710000, 670000, 690000]}},
+      "hourly_breakdown": {"hours": ["17", "18", "19", "20", "21", "22", "23", "24", "25"], "sales_actual": [60000, 90000, 120000, 110000, 95000, 80000, 85000, 60000, 20000], "sales_last_year": [58000, 88000, 115000, 108000, 93000, 78000, 80000, 55000, 18000]},
+      "menu_analysis": {"top_items": [{"name": "生ビール", "quantity": 200, "revenue": 100000, "change_rate": 7.5}, {"name": "焼き鳥盛り合わせ", "quantity": 120, "revenue": 84000, "change_rate": 4.2}, {"name": "鮮魚のお造り", "quantity": 65, "revenue": 97500, "change_rate": 9.8}]},
+      "staff_analysis": {"shifts": [{"time": "17:00-20:00", "required": 5, "actual": 5, "status": "optimal"}, {"time": "20:00-23:00", "required": 4, "actual": 5, "status": "overstaffed"}, {"time": "23:00-26:00", "required": 3, "actual": 3, "status": "optimal"}]},
+      "action_logs": []
+    }
+  }
+}
